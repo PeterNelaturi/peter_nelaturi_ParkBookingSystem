@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Form Page</title>
+
+  <script src="https://kit.fontawesome.com/5e01b8fbcc.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  
+  
+     <div id="container">
+     <a href="https://jschollitt.github.io/TeWaioTane/index.html" target="_blank">
+     <div id="sceneImg1">
+     <div class="scene-text line1">Whakatere Pass</div>
+      <div class="scene-text line2">Experience the Thrill of Waka Paddling on the River</div>
+      <div class="scene-text line3">With Premium Entry Ticket</div>
+    </div>
+    </a>
+
+     <a href="https://jschollitt.github.io/TeWaioTane/index.html" target="_blank">
+    <div id="sceneImg2">
+     <div class="scene-text line4">Hangi Feast</div>
+      <div class="scene-text line5">Cultural Performance</div>
+      <div class="scene-text line6">Come, Experience The Magic</div>
+    </div>
+    </a>
+
+    <button id="book-now-btn">Book Now</button>
+    <button id="home-btn">Home</button>
+  </div>
+
+ <aside id="sidebar">
+   
+    <a href="https://www.ea.govt.nz/" target="_blank">
+    <div id="scene1" class="scene">
+      <img id="img1" src="./assets/img1.jpg" />
+      <div id="txt1">It's Costs less..</div>
+    </div></a>
+    <a href="https://www.ea.govt.nz/" target="_blank">
+    <div id="scene2" class="scene">
+      <img id="img2" src="./assets/img2.jpg" />
+      <div id="txt2">By running appliances during off peak hours</div>
+    </div></a>
+    <a href="https://www.ea.govt.nz/" target="_blank">
+    <div id="scene3" class="scene">
+      <img id="img3" src="./assets/img3.jpg" />
+      <div id="txt3">You will save money..with same power..</div>      
+    </div></a>
+    <a href="https://www.ea.govt.nz/" target="_blank">
+    <div id="scene4" class="scene">
+      <img id="img4" src="./assets/img4.jpg" />
+      
+    </div></a>
+    <a href="https://www.ea.govt.nz/" target="_blank">
+    <div id="scene5" class="scene">
+      <img id="img5" src="./assets/img5.jpg" />
+      <div id="txt4">Smart switches..</div>
+    </div> </a>
+    <a href="https://www.ea.govt.nz/" target="_blank">
+    <div id="scene6" class="scene">
+      <img id="img6" src="./assets/img6.jpg" />
+      
+    </div></a>
+    <a href="https://www.ea.govt.nz/" target="_blank">
+    <div id="scene7" class="scene">
+      <img id="img7" src="./assets/img7.jpg" />
+      <div id="txt5">During off-peak hours!</div>
+    </div> </a>
+
+   <div id="adReplay" onclick="adReplay()">
+        <i class="fas fa-play"></i>
+    </div>
+    
+  </aside>
+  
+  <div id="user-form-container">
+
+
+    <label id="progress-label" for="progress-bar">Step 1 of 4</label>
+      <progress id="progress-bar" value="1" max="4"></progress>
+
+
+
+      <div class="form-step" id="step-1">
+      <h3>Step 1: Attendance Details</h3>
+
+      <label for="attendance-date">Date of Attendance:</label>
+      <input type="date" id="attendance-date" name="attendance_date" required><br><br>
+
+      <label for="adults">Adults:</label>
+      <input type="number" id="adults" name="adults" min="0" value="0" required><br><br>
+
+      <label for="children">Children:</label>
+      <input type="number" id="children" name="children" min="0" value="0" required><br><br>
+
+      <button type="button" id="next-btn-1">Next</button>
+    
+  </div>
+
+
+   <div class="form-step" id="step-2" style="display: none;">
+      <h3>Step 2: Contact Information</h3>
+      <label for="contact-name">Full Name:</label>
+      <input type="text" id="contact-name" name="contact_name" required><br><br>
+
+      <label for="contact-email">Email Address:</label>
+      <input type="email" id="contact-email" name="contact_email" required><br><br>
+
+      <button type="button" id="prev-btn-2">Previous</button>
+      <button type="button" id="next-btn-2">Next</button>
+  
+     </div>
+
+
+      <div class="form-step" id="step-3" style="display: none;">
+      <h3>Step 3: Ticket Options</h3>
+
+    
+       <label for="ticket-type">Choose Ticket Type:</label>
+       <select id="ticket-type" name="ticket_type" required>
+       <option value="">-- Select a Ticket --</option>
+       <option value="whakatere">Whakatere Pass – Premium Entry</option>
+       <option value="general">General Pass</option>
+       </select>
+       <br><br>
+
+       <label>Optional Storage Locker:</label>
+       <div class="radio-group">
+  <input type="radio" id="locker-yes" name="locker" value="yes" required>
+  <label for="locker-yes">Yes</label>
+
+  <input type="radio" id="locker-no" name="locker" value="no">
+  <label for="locker-no">No</label>
+
+  </div>
+  <br><br>
+
+      <button type="button" id="prev-btn-3">Previous</button>
+      <button type="button" id="next-btn-3">Next</button>
+  
+     </div>
+    
+     <div class="form-step" id="step-4" style="display: none;">
+  <h3>Step 4: Terms and Conditions</h3>
+  <input type="checkbox" id="agree-terms" name="agree_terms" required>
+  <label for="agree-terms">I agree to the terms and conditions</label>
+  <br><br>
+
+  <button type="button" id="prev-btn-4">Previous</button>
+  <button type="button" id="submit-btn">Submit</button>
+</div>
+
+
+<div class="form-step" id="step-5" style="display: none;">
+  <h3>Booking Summary</h3>
+  <div id="booking-summary">
+    <p><strong>Date of Attendance:</strong> <span id="summary-date"></span></p>
+    <p><strong>Adults:</strong> <span id="summary-adults"></span></p>
+    <p><strong>Children:</strong> <span id="summary-children"></span></p>
+    <p><strong>Contact Name:</strong> <span id="summary-name"></span></p>
+    <p><strong>Email Address:</strong> <span id="summary-email"></span></p>
+    <p><strong>Ticket Type:</strong> <span id="summary-ticket"></span></p>
+    <p><strong>Storage Locker:</strong> <span id="summary-locker"></span></p>
+     <button id="return-home-btn">Return to Home Page</button>
+  <button id="new-booking-btn">Make Another Booking</button>
+  </div>
+</div>
+
+</div>
+
+   <div class="student-label">
+    <p>Peter Nelaturi</p>
+    <p>Student ID: 1604600</p>
+  </div>
+
+  
+  <script src="submitform.js"></script>
+</body>
+</html>
