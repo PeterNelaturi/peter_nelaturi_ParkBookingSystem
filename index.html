@@ -84,8 +84,6 @@
     <label id="progress-label" for="progress-bar">Step 1 of 4</label>
       <progress id="progress-bar" value="1" max="4"></progress>
 
-
-
       <div class="form-step" id="step-1">
       <h3>Step 1: Attendance Details</h3>
 
@@ -124,18 +122,19 @@
        <label for="ticket-type">Choose Ticket Type:</label>
        <select id="ticket-type" name="ticket_type" required>
        <option value="">-- Select a Ticket --</option>
-       <option value="whakatere">Whakatere Pass – Premium Entry</option>
+       <option value="whakatere">Whakatere Pass - Premium Entry</option>
        <option value="general">General Pass</option>
-       </select>
-       <br><br>
+       </select><br><br>
 
        <label>Optional Storage Locker:</label>
-       <div class="radio-group">
-  <input type="radio" id="locker-yes" name="locker" value="yes" required>
-  <label for="locker-yes">Yes</label>
 
-  <input type="radio" id="locker-no" name="locker" value="no">
-  <label for="locker-no">No</label>
+       <div class="radio-group">
+        <label for="locker-yes">Yes</label>
+        <input type="radio" id="locker-yes" name="locker" value="yes" required>
+  
+      <label for="locker-no">No</label>
+      <input type="radio" id="locker-no" name="locker" value="no">
+  
 
   </div>
   <br><br>
@@ -147,8 +146,9 @@
     
      <div class="form-step" id="step-4" style="display: none;">
   <h3>Step 4: Terms and Conditions</h3>
-  <input type="checkbox" id="agree-terms" name="agree_terms" required>
+    
   <label for="agree-terms">I agree to the terms and conditions</label>
+  <input type="checkbox" id="agree-terms" name="agree_terms" required>
   <br><br>
 
   <button type="button" id="prev-btn-4">Previous</button>
