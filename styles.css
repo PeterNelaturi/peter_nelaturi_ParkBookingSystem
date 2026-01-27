@@ -55,13 +55,6 @@
   opacity: 1; 
 }
 
-.banner-text {
-  color: white;       
-  font-family: sans-serif; 
-  text-align: center;
-}
-
-
 
 #sceneImg1 .line1 {
   top: 30%;              
@@ -246,7 +239,7 @@
 .student-label {
   position: fixed;
   bottom: 10px;
-  right: 370px;
+  right: 380px;
   background-color: transparent;
   color: white;
   padding: 8px 12px;
