@@ -6,7 +6,9 @@
     height: 100vh;
     display: flex;
     justify-content: center; 
-    align-items: center;  
+    align-items: center; 
+    max-width: 1400px 
+    
 
 
 }
@@ -198,7 +200,7 @@
     position: fixed;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-80%);
+    transform: translateX(-50%);
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -320,7 +322,8 @@ body {
 }
 
 #sidebar {
-    width: 380px;           
+    width: 380px;    
+    max-width: 400px;       
     height: 100vh;           
     position: fixed;         
     top: 0;
