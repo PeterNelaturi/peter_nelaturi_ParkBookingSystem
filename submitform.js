@@ -1,174 +1,352 @@
-    let attendanceData = [];
 
-    const progress = document.getElementById("progress-bar");
-    const progressLabel = document.getElementById("progress-label");
-    let step = 1;
-    const maxStep = 4;
-
-    const bookBtn = document.getElementById("book-now-btn");
-    const formContainer = document.getElementById("user-form-container");
+  const homeButton = document.getElementById("home-btn");
+  
+  
+  homeButton.addEventListener("click", () => {
+      window.location.href = "index.html"; 
+  });
 
 
-    formContainer.style.display = "none";
 
 
-    bookBtn.addEventListener("click", () => {
-      formContainer.style.display = "block";
-      bookBtn.style.display = "none";
-      formContainer.scrollIntoView({ behavior: 'smooth' });
-    });
+  const butt = document.getElementById("book-btn");
 
-    function showStep(stepNumber) {
-    document.querySelectorAll(".form-step").forEach(div => div.style.display = "none");
-    document.getElementById(`step-${stepNumber}`).style.display = "block";
+  const container = document.createElement("div")
+
+  container.setAttribute("id", "stepid")
+
+  const step1 = 
+  ` <label class="progress-label">Step 1 of 4</label><br>
+      <progress class="progress-bar" value="1" max="4"></progress>
+
+  <div class="headings"><h3>Enter Booking Details</h3></div><br>
+  <div class="testing"><label for="date">Date of Attendence:</label>
+  <input type="date" id="date" name="attendence_date" required></div>
+  <div class="testing"><label for="adults">Adults:</label>
+  <input type="number" id="adults" name="adults" value="0" min="1" required></div>
+  <div class="testing"><label for="children">Children:</label>
+  <input type="number" id="children" value="0" min="1" required></div>
+
+  <button id="next1">Next</button>
+
+  `;
 
 
-  if (stepNumber === 5) {
-      progress.style.display = "none";
-      progressLabel.style.display = "none";
-    } else {
-      progress.style.display = "block";
-      progressLabel.style.display = "block";
-      progress.value = stepNumber;
-      progressLabel.textContent = `Step ${stepNumber} of ${maxStep}`;
+  const step2 = 
+
+  `<label class="progress-label">Step 2 of 4</label><br>
+   <progress class="progress-bar" value="2" max="4"></progress>
+
+   <div class="headings"><h3>Contact Information</h3></div>
+   <div class="step2-fields"><label for="contact-name">Full Name:</label>
+   <input type="text" id="contact-name" name="contact_name" required></div>
+   <div class="step2-fields"><label for="contact-email">Email Address:</label>
+   <input type="email" id="contact-email" name="contact_email" required></div>
+
+   <div class="step2-btns"><button type="button" id="prev-btn-2">Previous</button>
+   <button type="button" id="next2">Next</button></div>
+  `;
+
+  const step3 = 
+
+  `<label class="progress-label">Step 3 of 4</label><br>
+   <progress class="progress-bar" value="3" max="4"></progress>
+
+        <div class="headings"><h3>Ticket Options</h3></div>
+        <div class="step3-fields">
+
+        <div class="ticselection">
+        <label for="ticket-type">Choose Ticket Type:</label>
+        <select id="ticket-type" name="ticket_type" required>
+        <option value="">-- Select a Ticket --</option>
+        <option value="Whakatere Premium Pass">Whakatere Pass - Premium Entry</option>
+        <option value="General Pass">General Pass</option>
+        </select></div>
+
+        <div class="lockerselec">
+        <label>Optional Storage Locker:</label>
+        <div class="radio-group">
+          <label for="locker-yes">Yes</label>
+          <input type="radio" id="locker-yes" name="locker" value="Yes" required>
+    
+        <label for="locker-no">No</label>
+        <input type="radio" id="locker-no" name="locker" value="No"></div></div>
+    
+
+    </div>
+    <br><br>
+    
+        <div class="step3-btns">  
+        <button type="button" id="prev-btn-3">Previous</button>
+        <button type="button" id="next3">Next</button></div>
+  `;
+
+  const step4 =
+  ` <label class="progress-label">Step 4 of 4</label><br>
+      <progress class="progress-bar" value="4" max="4"></progress>
+
+  <div class="headings"><h3>Terms and Conditions</h3></div>
+        
+        <div class="step4-fields">
+        <label for="agree-terms">I agree to the terms and conditions</label>
+        <input type="checkbox" id="agree-terms" name="agree_terms" required>
+        </div>
+        <br><br>
+
+        <div class="step4-btns">
+        <button type="button" id="prev-btn-4">Previous</button>
+        <button type="button" id="submit-btn">Submit</button>
+        </div>
+  `;
+
+  function step5() { 
+  return`
+    <div id="final-heading"><h3>Booking Summary</h3></div>
+    <div class="finaldisp">
+    <p><strong>Full Name:</strong><span>${state.name}</span></p>
+    <p><strong>Email Address:</strong> <span>${state.email}</span></p>
+    <p><strong>Ticket Type:</strong> <span>${state.tickettype}</span></p>
+    <p><strong>Optional Storage Locker:</strong> <span>${state.locker}</span></p>
+    <p><strong>Date of Attendance:</strong> <span>${state.date}</span></p>
+    <p><strong>Adults:</strong> <span>${state.adults}</span></p>
+    <p><strong>Children:</strong> <span>${state.children}</span></p>
+    <p><strong>Terms & Conditions:</strong><span>${state.termsconditions?"Agreed" : "Not Agreed"}</span></p></div>
+    <br>
+    <button type="button" id="another">Make Another Booking</button>
+    <button type="button" id="return-hm">Return To Home Screen</button>
+  `;
+  }
+
+  const state = {
+
+      name: "",
+      email: "",
+      started: false,
+      formDispay: false,
+      tickettype: "",
+      locker: "",
+      termsconditions: false,
+      step: 1,
+      date: "",
+      adults: 0,
+      children: 0
+      
+  };
+
+  document.body.append(container);
+
+
+  function render() {
+
+      butt.style.display = state.started ? "none" : "block";
+      container.style.display = state.formDispay ? "block" : "none";
+
+      if (state.step === 1) {
+        
+      container.innerHTML = step1;
+    
+      document.getElementById("date").value = state.date 
+      document.getElementById("adults").value = state.adults 
+      document.getElementById("children").value = state.children 
+
     }
+
+    if (state.step === 2) {
+
+      container.innerHTML = step2;
+    
+      document.getElementById("contact-name").value = state.name;
+      document.getElementById("contact-email").value = state.email;
+
+      
+    }
+
+    if (state.step === 3) {
+      container.innerHTML = step3;
+
+        document.getElementById("ticket-type").value = state.tickettype;
+
+          if (state.locker) {
+
+      document.querySelector(`input[name="locker"][value="${state.locker}"]`).checked = true;
 
   }
 
 
+    }
 
-    document.getElementById("next-btn-1").addEventListener("click", () => {
-      const attendanceDate = document.getElementById("attendance-date").value;
-      const adults = document.getElementById("adults").value;
-      const children = document.getElementById("children").value;
+    if (state.step === 4) {
+      container.innerHTML = step4;
+    }
 
 
-      if (!attendanceDate) {
-        alert("Please select a date of attendance.");
-        return;
+    if (state.step === 5) {
+      container.innerHTML = step5();
+    }
+      
+  }
+
+
+  document.addEventListener("input" , (e)=>{
+
+      if(e.target.id === "date"){
+
+          state.date = e.target.value;
       }
 
-      attendanceData.push({ attendanceDate, adults, children });
-      console.log("Step 1 data saved:", attendanceData);
+  if(e.target.id === "adults") {
+
+      state.adults = Number(e.target.value);
+  }
+
+  if(e.target.id === "children") {
+
+      state.children = Number(e.target.value);
+  }
+
+  if (e.target.id === "contact-name") {
+      state.name = e.target.value;
+  }
+
+  if (e.target.id === "contact-email") {
+      state.email = e.target.value;
+  }
+
+  if (e.target.id === "ticket-type") {
+      state.tickettype = e.target.value;
+  }
 
 
-      step = 2;
-    showStep(step);
+  })
+
+
+  document.addEventListener("change", (e) => {
+
+      if (e.target.name === "locker") {
+          state.locker = e.target.value;
+      }
+
+      if (e.target.id === "agree-terms") {
+          state.termsconditions = e.target.checked;
+      }
+
   });
 
-  document.getElementById("prev-btn-2").addEventListener("click", () => {
-    step = 1;
-    showStep(step);
+
+
+  butt.addEventListener("click", () => {
+
+      state.started = true;
+      state.formDispay = true;
+      state.step = 1;
+      render();
   });
 
 
-  document.getElementById("next-btn-2").addEventListener("click", () => {
-    const contactName = document.getElementById("contact-name").value;
-    const contactEmail = document.getElementById("contact-email").value;
+  container.addEventListener("click", (e) => {
 
-    if (!contactName || !contactEmail) {
-      alert("Please fill in contact details.");
-      return;
-    }
+      if (e.target.id === "next1") {
 
-    attendanceData.push({ contactName, contactEmail });
-    console.log("Step 2 data saved:", attendanceData);
-
-    step = 3;
-    showStep(step); 
-  });
-
-  document.getElementById("prev-btn-3").addEventListener("click", () => {
-    step = 2;
-    showStep(step);
-  });
-
-  document.getElementById("next-btn-3").addEventListener("click", () => {
-    const ticketType = document.getElementById("ticket-type").value;
-    const locker = document.querySelector('input[name="locker"]:checked')?.value;
-
-    if (!ticketType) {
-      alert("Please select a ticket type.");
-      return;
-    }
-
-
-    if (!locker) {
-      alert("Please choose whether you want a storage locker.");
-      return;
-    }
-
-    attendanceData.push({ ticketType, locker });
-    console.log("Step 3 data saved:", attendanceData);
-
-    step = 4;
-    showStep(step); 
-  });
-
-  document.getElementById("prev-btn-4").addEventListener("click", () => {
-    step = 3;
-    showStep(step);
-  });
-
-  document.getElementById("submit-btn").addEventListener("click", () => {
-    const agree = document.getElementById("agree-terms").checked;
-    if (!agree) {
-      alert("You must agree to the terms and conditions to proceed.");
-      return;
-    }
-
-    attendanceData.push({ agreedToTerms: true });
-    console.log("Step 4 data saved:", attendanceData);
-
-
-
-    const step1 = attendanceData[0];
-    const step2 = attendanceData[1];
-    const step3 = attendanceData[2];
-
-    document.getElementById("summary-date").textContent = step1.attendanceDate;
-    document.getElementById("summary-adults").textContent = step1.adults;
-    document.getElementById("summary-children").textContent = step1.children;
-    document.getElementById("summary-name").textContent = step2.contactName;
-    document.getElementById("summary-email").textContent = step2.contactEmail;
-    document.getElementById("summary-ticket").textContent = step3.ticketType === "whakatere" ? "Whakatere Pass – Premium Entry" : "General Pass";
-    document.getElementById("summary-locker").textContent = step3.locker === "yes" ? "Yes" : "No";
-
+          if (!state.date || state.adults < 1 || state.children < 1) {
+          alert("Please provide Date, Number of Adults, Number of Children");
+          return;
+      }
   
-    step = 5;
-    showStep(step);
-  });
+      state.step = 2;
+      render();
+    }
 
 
-  showStep(step);
 
-  document.getElementById("return-home-btn").addEventListener("click", () => {
-      window.location.href = "index.html";
-  });
+    if (e.target.id === "next2") {
 
+      if (!state.name || !state.email) {
+          alert("Please Enter Name and Email");
+          return;
+      }
 
-  document.getElementById("new-booking-btn").addEventListener("click", () => {
+      state.step = 3;
+      render();
+    }
+
+    if (e.target.id === "next3") {
+
+      if (!state.tickettype) {
+      alert("Please Enter Ticket Type");
+      return;
+  }
+
+  if (!state.locker) {
+      alert("Please Select Storage Locker Option");
+      return;
+  }
+
+      state.step = 4;
+      render();
       
-      attendanceData = [];
-      step = 1;
-      showStep(step);
+    }
+
+    if (e.target.id === "submit-btn") {
+      
+      if (!state.termsconditions) {
+          alert("You must agree to the terms and conditions to continue.");
+          return;
+      }
+
+      
+
+      state.step = 5;
+      render();
+      
+    }
+
+
+    if(e.target.id === "prev-btn-2"){
+      state.step = 1;
+      render();
+    
+    }
+
+
+    if(e.target.id === "prev-btn-3"){
+      state.step = 2;
+      render();
+    
+    }
+
+
+    if(e.target.id === "prev-btn-4"){
+      state.step = 3;
+      render();
+    
+    }
+
+
+    if (e.target.id === "another") {
+      state.started = true;
+      state.step = 1;
+
+      state.name = "";
+      state.email = "";
+      state.tickettype = "";
+      state.locker = "";
+      state.date = "";
+      state.adults = 0;
+      state.children = 0;
+      state.termsconditions = false;
+
+      render();
+  }
+
+
+  if(e.target.id === "return-hm"){
+
+    window.location.href = "index.html";
+  }
+
 
     
-      document.getElementById("attendance-date").value = "";
-      document.getElementById("adults").value = 0;
-      document.getElementById("children").value = 0;
-      document.getElementById("contact-name").value = "";
-      document.getElementById("contact-email").value = "";
-      document.getElementById("ticket-type").value = "";
-      document.querySelectorAll('input[name="locker"]').forEach(r => r.checked = false);
-      document.getElementById("agree-terms").checked = false;
   });
-
-  document.getElementById("home-btn").addEventListener("click", () => {
-      window.location.href = "index.html"; 
-  });
-      
-
 
     
   const scenes = [];
@@ -204,7 +382,7 @@ function animateFlipbook() {
         [0, 1], 
         [2, 3], 
         [4, 5], 
-        [4, 6]  // this contains txt5
+        [4, 6]  
     ];
 
     let step = 0;
@@ -242,5 +420,3 @@ function animateFlipbook() {
 
 
 
-
- 

@@ -30,7 +30,7 @@
     </div>
     
 
-    <button id="book-now-btn">Book Now</button>
+    <button id="book-btn">Book Now</button>
     <button id="home-btn">Home</button>
   </div>
 
@@ -78,100 +78,7 @@
     
   </aside>
   
-  <div id="user-form-container">
-
-
-    <label id="progress-label" for="progress-bar">Step 1 of 4</label>
-      <progress id="progress-bar" value="1" max="4"></progress>
-
-      <div class="form-step" id="step-1">
-      <h3>Step 1: Attendance Details</h3>
-
-      <label for="attendance-date">Date of Attendance:</label>
-      <input type="date" id="attendance-date" name="attendance_date" required><br><br>
-
-      <label for="adults">Adults:</label>
-      <input type="number" id="adults" name="adults" min="0" value="0" required><br><br>
-
-      <label for="children">Children:</label>
-      <input type="number" id="children" name="children" min="0" value="0" required><br><br>
-
-      <button type="button" id="next-btn-1">Next</button>
-    
-  </div>
-
-
-   <div class="form-step" id="step-2" style="display: none;">
-      <h3>Step 2: Contact Information</h3>
-      <label for="contact-name">Full Name:</label>
-      <input type="text" id="contact-name" name="contact_name" required><br><br>
-
-      <label for="contact-email">Email Address:</label>
-      <input type="email" id="contact-email" name="contact_email" required><br><br>
-
-      <button type="button" id="prev-btn-2">Previous</button>
-      <button type="button" id="next-btn-2">Next</button>
   
-     </div>
-
-
-      <div class="form-step" id="step-3" style="display: none;">
-      <h3>Step 3: Ticket Options</h3>
-
-    
-       <label for="ticket-type">Choose Ticket Type:</label>
-       <select id="ticket-type" name="ticket_type" required>
-       <option value="">-- Select a Ticket --</option>
-       <option value="whakatere">Whakatere Pass - Premium Entry</option>
-       <option value="general">General Pass</option>
-       </select><br><br>
-
-       <label>Optional Storage Locker:</label>
-
-       <div class="radio-group">
-        <label for="locker-yes">Yes</label>
-        <input type="radio" id="locker-yes" name="locker" value="yes" required>
-  
-      <label for="locker-no">No</label>
-      <input type="radio" id="locker-no" name="locker" value="no">
-  
-
-  </div>
-  <br><br>
-
-      <button type="button" id="prev-btn-3">Previous</button>
-      <button type="button" id="next-btn-3">Next</button>
-  
-     </div>
-    
-     <div class="form-step" id="step-4" style="display: none;">
-  <h3>Step 4: Terms and Conditions</h3>
-    
-  <label for="agree-terms">I agree to the terms and conditions</label>
-  <input type="checkbox" id="agree-terms" name="agree_terms" required>
-  <br><br>
-
-  <button type="button" id="prev-btn-4">Previous</button>
-  <button type="button" id="submit-btn">Submit</button>
-</div>
-
-
-<div class="form-step" id="step-5" style="display: none;">
-  <h3>Booking Summary</h3>
-  <div id="booking-summary">
-    <p><strong>Date of Attendance:</strong> <span id="summary-date"></span></p>
-    <p><strong>Adults:</strong> <span id="summary-adults"></span></p>
-    <p><strong>Children:</strong> <span id="summary-children"></span></p>
-    <p><strong>Contact Name:</strong> <span id="summary-name"></span></p>
-    <p><strong>Email Address:</strong> <span id="summary-email"></span></p>
-    <p><strong>Ticket Type:</strong> <span id="summary-ticket"></span></p>
-    <p><strong>Storage Locker:</strong> <span id="summary-locker"></span></p>
-     <button id="return-home-btn">Return to Home Page</button>
-  <button id="new-booking-btn">Make Another Booking</button>
-  </div>
-</div>
-
-</div>
 
    <div class="student-label">
     <p>Developed by</p>

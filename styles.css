@@ -7,7 +7,11 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    max-width: 1400px 
+    max-width: 1400px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: black;
     
 
 
@@ -18,7 +22,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('./assets/Scene1.png');
+    background-image: url('./assets/Newimg1_.png');
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -26,6 +30,9 @@
     background-repeat: no-repeat;
     opacity: 1;  
     animation: showScene1 10s infinite, zoomScene1 10s infinite;
+  
+
+    
 
 }
 
@@ -35,7 +42,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('./assets/Scene2.jpg');
+    background-image: url('./assets/Newimg2.png');
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -59,7 +66,7 @@
 
 
 #sceneImg1 .line1 {
-  top: 30%;              
+  top: 25%;              
   left: 55%;             
   transform: translateX(-50%); 
   font-size: 2.2rem;      
@@ -70,10 +77,10 @@
 
 
 #sceneImg1 .line2 { 
-  top: 40%; 
+  top: 33%; 
   left: 50%; 
   transform: translateX(-50%); 
-  font-size: 1.5rem; 
+  font-size: 1rem; 
   position: absolute; 
   opacity: 0; 
   animation: slideInLine2 10s linear infinite; 
@@ -82,10 +89,10 @@
 }
 
 #sceneImg1 .line3 { 
-  top: 45%; 
+  top: 36%; 
   left: 50%; 
   transform: translateX(-50%); 
-  font-size: 1.5rem; 
+  font-size: 1rem; 
   position: absolute; 
   opacity: 0; 
   animation: slideInLine3 10s linear infinite; 
@@ -161,18 +168,19 @@
 
 
 
-#book-now-btn {
+#book-btn {
 
     position: absolute;      
-    top: 20px;               
+    top: 10px;               
     right: 20px; 
     padding: 15px 30px;
     font-size: 1.2rem;
     
-    background-color: rgba(0, 255, 51, 0.625);
+    background-color: greenyellow;
     color: #0a0a0a;
     border: none;
     border-radius: 8px;
+    border-style: solid;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     z-index: 10;
@@ -181,7 +189,7 @@
 
 #home-btn {
     position: absolute;       
-    bottom: 20px;          
+   top: 10px;          
     left: 20px;           
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -190,58 +198,272 @@
     color: #fff;
     border: none;
     border-radius: 8px;
+    border-style: solid;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     z-index: 10;         
 }
 
 
-#user-form-container {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    display: none; 
-    width: 400px; 
-    min-height: 300px;
+
+#stepid{
+
+    position: absolute;
+    width: 650px;
+    height: 500px;
+    top: 280px;
+    left: 395px;
+    z-index: 2;
+    display: none;
+    
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+
     
 }
 
-
-
-
-#progress-bar {
-  position: relative; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #e0e0e0;
-  padding: 5px;
-  font-weight: bold;
+.testing {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    margin-left: 180px;
+    top: 50px;
 }
 
-.radio-group {
-  display: flex;
-  gap: 20px; 
-  align-items: center;
-  margin-top: 10px;
+.testing label {
+    width: 180px;   
+    color: white;
+    font-weight: bold;
+    font-size: medium;
 }
 
-#step-5 h3 {
-  text-align: center;       
-  text-decoration: underline; 
+.headings{
+    
+    position: relative;
+    color: blue;
+    left: 125px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    font-weight: bold;
+    font-size: larger;
+    top: 50px;
+    left: 210px;
 }
+
+
+
+.progress-bar{
+
+    position: relative;
+    margin-left: 260px;
+    top: 20px;
+}
+
+.progress-label{
+
+    position: relative;
+    top: 20px;
+    margin-left: 285px;
+    font-weight: bold;
+
+}
+
+
+#next1{
+
+    position: relative;
+    top: 80px;
+    left: 180px;
+    width: 100px;
+    background-color: green;
+}
+
+
+.step2-fields{
+
+   position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    margin-left: 115px;
+    top: 75px;
+
+}
+
+
+.step2-fields label{
+
+    width: 180px;   
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    margin-left: 60px;
+
+}
+
+.step2-btns button{
+
+    position: relative;
+    top: 115px;
+    left: 175px;
+    background-color: green;
+    width: 100px;
+}
+
+.step2-fields input{
+    
+    position: relative;
+    width: 220px;
+    right: 40px;
+}
+
+
+.step3-fields{
+
+    position: relative;
+    top: 60px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+
+}
+
+
+
+.step3-fields label{
+   
+     width: 180px;   
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.step3-fields select{
+    position: relative;
+    width: 250px;
+    left: 50px;
+}
+
+.radio-group{
+    
+    position: relative;
+    left: 250px;
+}
+
+.step3-btns button{
+
+    position: relative;
+    top: 80px;
+    left: 200px;
+    background-color: green;
+    width: 100px;
+}
+
+.step4-fields{
+    position: relative;
+    top: 80px;
+    left: 65px;
+}
+
+.step4-fields label{
+
+     width: 180px;   
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+
+.step4-btns button{
+
+    position: relative;
+    top: 80px;
+    left: 200px;
+    background-color: green;
+    width: 100px;
+
+}
+
+
+
+#final-heading{
+
+    position: relative;
+    font-size: larger;
+    font-weight: bold;
+    color: blue;
+    top: 10px;
+    left: 175px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+
+.finaldisp{
+
+    position: absolute;
+    top: 80px;
+   margin-left: 130px;
+   left: 100px;
+   color: black;
+   font-size: medium;
+   margin: 8px 0;
+
+}
+
+.finaldisp p span{
+
+
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+
+}
+
+
+.finaldisp strong{
+    display: inline-block;
+    width: 220px;
+}
+
+
+#another{
+
+    position: relative;
+    top: 370px;
+    left: 100px;
+    background-color: green;
+    font-weight: bold;
+    
+
+}
+
+
+#return-hm{
+
+    position: relative;
+    top: 370px;
+    left: 200px;
+    background-color: green;
+    font-weight: bold;
+
+}
+
+
 
 .student-label {
   position: fixed;
-  bottom: 10px;
-  right: 380px;
+  top: 680px;
   background-color: transparent;
   color: white;
   padding: 8px 12px;
@@ -267,29 +489,24 @@
 
 @keyframes zoomScene1 {
     0%   { transform: scale(1); }
-    50%  { transform: scale(1.30); }  
-    100% { transform: scale(1.2); }
+    50%  { transform: scale(1.8); }  
+    100% { transform: scale(1.5); }
 }
 
 
 @keyframes scrollScene2 {
-    50%   { background-position: 100% 0; }
+    50%   { background-position: 2500% 0; }
     100% { background-position: 0 0; }
 }
 
 body {
   margin: 0;               
   background-color: #d3d3d3;  
-  height: 100vh;           
+  height: 100vh;   
+  overflow: hidden;        
 }
 
 
-.form-step {
-  display: none;
-}
-.form-step.active {
-  display: block;
-}
 
 
 
@@ -325,14 +542,19 @@ body {
     width: 380px;    
     max-width: 400px;       
     height: 100vh;           
-    position: fixed;         
+    position: absolute;         
     top: 0;
     right: 0;               
     border-left: 1px solid #000; 
     background-color: #f0f0f0;    
     z-index: 1000;          
-    overflow-y: auto;       
-    padding: 20px;
+    overflow-y: hidden ;    
+    overflow-x: hidden;   
+    padding: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: blue;
 }
 
 .scene {
@@ -418,22 +640,21 @@ body {
     position: absolute;   
     bottom: 0;
     left: 0;
-    width: 30%;
-    height: 20%;
+    width: 100%;
+    height: 100%;
     z-index: 5; 
     
 }
 
 
 #img4 {
-
-    position: absolute;    
-    width: 110%;           
-    height: 100%;         
-    object-fit: contain;     
-    bottom: 0;
-    left: 0;
-    z-index: 10;  
+    position: absolute;
+    width: 110px;
+    height: 650px;
+    top: 368px;
+    left: 0px;
+    z-index: 10;
+    object-fit: contain; 
 }
         
 
@@ -550,7 +771,7 @@ position: absolute;
 #txt4 {
 position: absolute;
     font-size: 20px;
-    right: 20px;
+    right: 80px;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -561,8 +782,8 @@ position: absolute;
 #txt5 {
   position: absolute;
     font-size: 20px;
-    right: 20px;  
-    top: 60px;
+    left: 160px; 
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     background-color: yellow;   
