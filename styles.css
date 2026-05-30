@@ -51,7 +51,7 @@
      background-position: 0 0;
     background-repeat: repeat-x;
     opacity: 0;  
-    animation: showScene2 10s infinite, scrollScene2 10s linear infinite;
+    animation: showScene2 10s infinite, scrollScene2 30s linear infinite;
     z-index: 1;
 }
 
