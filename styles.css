@@ -1,19 +1,19 @@
 #container {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #000;
-    width: 75vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    max-width: 1400px;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 10px;
-    border-color: black;
-    
-
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #000;
+        /* width: 75vw; */
+        height: 100vh;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        /* max-width: 1400px; */
+        border-style: solid;
+        border-width: 5px;
+        border-radius: 10px;
+        border-color: black;
+        flex: 1;
+        min-width: 0;   
 
 }
 
@@ -500,10 +500,13 @@
 }
 
 body {
-  margin: 0;               
-  background-color: #d3d3d3;  
+  margin: 0;
+  display: flex;               
+  background-color: #d3d3d3; 
+  width: 100vw;  
   height: 100vh;   
-  overflow: hidden;        
+  overflow: hidden; 
+  gap: 0;       
 }
 
 
@@ -536,13 +539,14 @@ body {
     font-size: 15px;
     line-height: 1.5;
     color: #000;
+    
 }
 
 #sidebar {
     width: 380px;    
     max-width: 400px;       
     height: 100vh;           
-    position: absolute;         
+    position: relative;         
     top: 0;
     right: 0;               
     border-left: 1px solid #000; 
@@ -555,6 +559,7 @@ body {
     border-width: 2px;
     border-radius: 20px;
     border-color: blue;
+    flex-shrink: 0;
 }
 
 .scene {
