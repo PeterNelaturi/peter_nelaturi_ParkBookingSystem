@@ -45,8 +45,10 @@
     background-image: url('./assets/Newimg2.png');
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: 100% 0;
+    /* background-size: cover; */
+    background-size: auto 100%;
+    /* background-position: 100% 0; */
+     background-position: 0 0;
     background-repeat: repeat-x;
     opacity: 0;  
     animation: showScene2 10s infinite, scrollScene2 10s linear infinite;
@@ -500,9 +502,14 @@
 }
 
 
-@keyframes scrollScene2 {
+/* @keyframes scrollScene2 {
     50%   { background-position: 2500% 0; }
     100% { background-position: 0 0; }
+} */
+
+@keyframes scrollScene2 {
+    0%    { background-position: 0 0; }
+    100%  { background-position: -2000px 0; }   /* fixed px, consistent on all screens */
 }
 
 body {
