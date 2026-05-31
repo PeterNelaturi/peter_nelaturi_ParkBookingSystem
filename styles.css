@@ -836,6 +836,36 @@ position: absolute;
         flex-direction: column;
     }
 
+     #next1 {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .step2-btns button {
+        top: 20px;
+        left: 0;
+    }
+
+    .step3-btns button {
+        top: 20px;
+        left: 0;
+    }
+
+    .step4-btns button {
+        top: 20px;
+        left: 0;
+    }
+
+      .step3-fields {
+        top: 20px;
+    }
+
+    .step4-fields {
+        top: 20px;
+        left: 20px;
+    }
+
     #container {
         width: 100vw;
         height: 50vh;
@@ -855,18 +885,21 @@ position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        overflow-y: auto;
     }
 
     .testing {
         margin-left: 20px;
         flex-direction: column;
         align-items: flex-start;
+        top: 10px;
     }
 
     .step2-fields {
         margin-left: 20px;
         flex-direction: column;
         align-items: flex-start;
+        top: 20px;
     }
 
     .step2-fields input {
