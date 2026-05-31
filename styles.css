@@ -51,7 +51,7 @@
      background-position: 0 0;
     background-repeat: repeat-x;
     opacity: 0;  
-    animation: showScene2 10s infinite, scrollScene2 30s linear infinite;
+    animation: showScene2 10s infinite, scrollScene2 35s linear infinite;
     z-index: 1;
 }
 
@@ -216,7 +216,7 @@
     /* top: 280px;
     left: 395px; */
     top: 68%;
-    left: 45%;
+    left: 60%;
     z-index: 2;
     display: none;
     transform: translate(-50%, -50%);
@@ -828,3 +828,76 @@ position: absolute;
   transition: opacity 0.3s ease;
 }
 
+
+/* For small screens */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    #container {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    #sidebar {
+        width: 100%;
+        max-width: 100%;
+        height: 50vh;
+        border-radius: 0;
+    }
+
+    #stepid {
+        width: min(650px, 90vw);
+        height: auto;
+        min-height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .testing {
+        margin-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step2-fields {
+        margin-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step2-fields input {
+        width: 100%;
+        right: 0;
+    }
+
+    .step3-fields select {
+        width: 100%;
+        left: 0;
+    }
+
+    .radio-group {
+        left: 0;
+    }
+
+    .headings {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .progress-bar {
+        margin-left: 20px;
+    }
+
+    .progress-label {
+        margin-left: 20px;
+    }
+
+    .student-label {
+        left: 20px;
+        transform: none;
+    }
+}   

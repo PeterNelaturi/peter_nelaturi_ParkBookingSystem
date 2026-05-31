@@ -133,7 +133,9 @@
       
   };
 
-  document.body.append(container);
+  const mainscreen = document.getElementById("container");
+
+  mainscreen.append(container);
 
 
   function render() {
@@ -376,8 +378,10 @@
       });
   }
 
+  let timer = null; 
 
 function animateFlipbook() {
+    if (timer) clearInterval(timer);
     let sequence = [
         [0, 1], 
         [2, 3], 
@@ -389,7 +393,7 @@ function animateFlipbook() {
 
     showScenes(sequence[step]);
 
-    let timer = setInterval(() => {
+     timer = setInterval(() => {
         step++;
         if (step >= sequence.length) {
             clearInterval(timer);
