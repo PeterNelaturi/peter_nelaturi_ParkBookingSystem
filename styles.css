@@ -950,14 +950,14 @@ position: absolute;
 
     #container {
         width: 100vw;
-        height: 70dvh;
+        height: 72dvh;
         flex-shrink: 0;
     }
 
     #sidebar {
         width: 100%;
         max-width: 100%;
-        height: 30dvh;
+        height: 28dvh;
         flex-shrink: 0; 
         border-radius: 0;
     }
