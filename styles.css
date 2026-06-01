@@ -940,7 +940,7 @@ position: absolute;
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
-        overflow-y: auto;
+        /* overflow-y: auto; */
     }
 
     .testing {
@@ -989,8 +989,8 @@ position: absolute;
     }
 
     .student-label {
-        top: 68%;
-        left: 1px;
+        top: 75%;
+        left: -7px;
         transform: none;
         
     }
@@ -1027,7 +1027,7 @@ position: absolute;
 }
 
     #another {
-        
+
          top: -20px;
     left: 5px;
     font-size: 11px;
