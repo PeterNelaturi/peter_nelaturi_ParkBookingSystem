@@ -909,6 +909,7 @@ position: absolute;
         transform: translateX(-50%);
         background-color: green;
     font-weight: bold;
+    color: black;
     }
 
     .step2-btns button {
@@ -916,6 +917,7 @@ position: absolute;
         left: 30px;
         background-color: green;
     font-weight: bold;
+    color: black;
     }
 
     .step3-btns button {
@@ -923,6 +925,7 @@ position: absolute;
         left: 10%;
         background-color: green;
     font-weight: bold;
+    color: black;
     }
 
     .step4-btns button {
@@ -930,6 +933,7 @@ position: absolute;
         left: 15px;
         background-color: green;
     font-weight: bold;
+    color: black;
     }
 
       .step3-fields {
@@ -1059,6 +1063,7 @@ position: absolute;
     padding: 5px 8px;
     background-color: green;
     font-weight: bold;
+    color: black;
     }
 
     #return-hm {
@@ -1070,6 +1075,7 @@ position: absolute;
     padding: 5px 8px;
     background-color: green;
     font-weight: bold;
+    color: black;
     }
 
     #txt5 {
