@@ -832,6 +832,10 @@ position: absolute;
 /* For small screens */
 @media (max-width: 768px) {
 
+     input, select {
+        font-size: 16px;   /* iOS won't zoom if font-size is 16px or more */
+    }
+
     body {
         flex-direction: column;
     }
