@@ -840,14 +840,14 @@ position: absolute;
         position: fixed;
         overflow: hidden;
         width: 100%;
-        height: 100%;
+        height: 100dvh;
     }
 
     body {
          position: fixed;
         overflow: hidden;
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
         flex-direction: column;
     }
 
@@ -950,14 +950,14 @@ position: absolute;
 
     #container {
         width: 100vw;
-        height: 70vh;
+        height: 70dvh;
         flex-shrink: 0;
     }
 
     #sidebar {
         width: 100%;
         max-width: 100%;
-        height: 30vh;
+        height: 30dvh;
         flex-shrink: 0; 
         border-radius: 0;
     }
