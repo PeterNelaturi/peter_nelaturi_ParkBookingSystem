@@ -674,8 +674,9 @@ body {
 #img4 {
     position: absolute;
     width: 110px;
-    height: 650px;
-    top: 373px;
+    height: 20vh;
+    bottom: 0;        /* anchor to bottom */
+    top: auto;        
     left: 0px;
     z-index: 10;
     object-fit: contain; 
