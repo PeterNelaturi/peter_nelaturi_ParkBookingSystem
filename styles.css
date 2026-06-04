@@ -1213,9 +1213,20 @@ position: absolute;
     border-width: 1px;
 
     }
-
-  
-
-    
+ 
 
 }   
+
+
+/* adding media query for large monitors*/
+@media (min-width: 1440px) {
+    #img2 {
+        bottom: 0;
+        height: 25%;
+    }
+
+    #img4 {
+        bottom: 0;
+        height: 25vh;
+    }
+}
