@@ -958,7 +958,7 @@ position: absolute;
     font-size: 15px;
     right: 80px;
     top: 15px;
-    left: 53%;
+    left: 55%;
     transform: translateX(-50%);
     color: green;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -966,8 +966,8 @@ position: absolute;
 
     #txt5 {
     font-size: 12px;
-    top: 65px;
-    left: 53%;
+    top: 70px;
+    left: 57%;
     transform: translateX(-50%);
     padding: 4px 8px;
 }
