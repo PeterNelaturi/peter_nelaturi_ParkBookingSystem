@@ -1222,11 +1222,11 @@ position: absolute;
 @media (min-width: 1440px) {
     #img2 {
         bottom: 0;
-        height: 25%;
+        height: 30%;
     }
 
     #img4 {
         bottom: 0;
-        height: 25vh;
+        height: 30vh;
     }
 }
