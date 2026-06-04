@@ -1220,13 +1220,17 @@ position: absolute;
 
 /* adding media query for large monitors*/
 @media (min-width: 1440px) {
+    .scene {
+        height: 50vh;
+    }
+
     #img2 {
-        bottom: -20px;
-        height: 30%;
+        bottom: 0;
+        height: 25%;
     }
 
     #img4 {
-        bottom: -20px;
-        height: 30vh;
+        bottom: 0;
+        height: 25vh;
     }
 }
