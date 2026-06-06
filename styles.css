@@ -1220,17 +1220,7 @@ position: absolute;
 
 /* adding media query for large monitors*/
 @media (min-height: 1000px) {
-    .scene {
-        height: 50vh;
-    }
-
-    #img2 {
-        bottom: -3px;
-        height: 25%;
-    }
-
-    #img4 {
-        bottom: -3px;
-        height: 25vh;
+    #sidebar {
+        height: calc(100vh + 3px);
     }
 }
