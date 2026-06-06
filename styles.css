@@ -1225,12 +1225,12 @@ position: absolute;
     }
 
     #img2 {
-        bottom: 0;
+        bottom: -3px;
         height: 25%;
     }
 
     #img4 {
-        bottom: 0;
+        bottom: -3px;
         height: 25vh;
     }
 }
