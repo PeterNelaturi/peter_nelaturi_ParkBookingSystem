@@ -1222,6 +1222,7 @@ position: absolute;
 @media (min-height: 1000px) {
     #img2 {
         position: absolute;
+        left: -20px;
         bottom: -18px;
         height: 25%;
     }
