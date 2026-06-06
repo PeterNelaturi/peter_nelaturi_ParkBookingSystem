@@ -1235,7 +1235,7 @@ position: absolute;
 
 
 /*for extra large screens */
-@media (min-width: 3000px) {
+@media (min-width: 3840px) {
     #img2 {
 
         position: relative;
