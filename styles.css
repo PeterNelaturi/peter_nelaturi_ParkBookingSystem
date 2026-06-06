@@ -1219,7 +1219,7 @@ position: absolute;
 
 
 /* adding media query for large monitors*/
-/* @media (min-width: 1440px) {
+@media (min-height: 1000px) {
     #img2 {
         position: absolute;
         bottom: -18px;
@@ -1231,6 +1231,6 @@ position: absolute;
         bottom: -22px;
         height: 25vh;
     }
-} */
+}
 
 
