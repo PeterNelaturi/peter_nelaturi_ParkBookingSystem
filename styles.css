@@ -1239,14 +1239,14 @@ position: absolute;
     #img2 {
 
         position: relative;
-        left: 0;
+        left: -10px;
         bottom: 0;
         
     }
 
     #img4 {
         position: relative;
-        left: 0;
+        left: -10px;
         bottom: 0;
         
     }
