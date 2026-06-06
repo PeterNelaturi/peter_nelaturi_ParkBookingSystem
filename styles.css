@@ -1221,7 +1221,7 @@ position: absolute;
 /* adding media query for large monitors*/
 @media (min-height: 1000px) {
     .scene {
-        height: 50vh;
+        height: 53vh;
     }
 
     #img2 {
