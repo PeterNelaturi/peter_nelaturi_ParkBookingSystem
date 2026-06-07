@@ -1219,7 +1219,7 @@ position: absolute;
 
 
 /* adding media query for large monitors*/
-@media (min-height: 1000px) {
+@media (max-height: 920px) {
     .scene {
         overflow: visible;
     }
@@ -1230,13 +1230,13 @@ position: absolute;
 
     #img2 {
         position: absolute;
-        bottom: -3px;
+        bottom: -18px;
         height: 25%;
     }
 
     #img4 {
         position: absolute;
-        bottom: -3px;
+        bottom: -20px;
         height: 25vh;
     }
 }
