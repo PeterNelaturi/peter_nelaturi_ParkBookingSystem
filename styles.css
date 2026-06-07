@@ -1221,7 +1221,7 @@ position: absolute;
 /* adding media query for large monitors*/
 @media (min-height: 1000px) {
     #img2 {
-        position: absolute;
+        position: relative;
         left: -20px;
         bottom: 50px;
         height: 25%;
