@@ -424,29 +424,12 @@ function animateFlipbook() {
 
 
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     if (window.devicePixelRatio === 1) {
-//         const img2 = document.getElementById('img2');
-//         const img4 = document.getElementById('img4');
-//         if (img2) img2.style.marginBottom = '-15px';
-//         if (img4) img4.style.marginBottom = '-20px';
-//     }
-// });
-
-/*dynamically correct img2/img4 bottom gap on DPR 1 monitors*/
 window.addEventListener('DOMContentLoaded', () => {
     if (window.devicePixelRatio === 1) {
+        const img2 = document.getElementById('img2');
         const img4 = document.getElementById('img4');
-        const sidebar = document.getElementById('sidebar');
-        if (img4 && sidebar) {
-            const img4Bottom = img4.getBoundingClientRect().bottom;
-            const sidebarBottom = sidebar.getBoundingClientRect().bottom - 2;
-            const gap = sidebarBottom - img4Bottom;
-            if (gap > 0) {
-                const img2 = document.getElementById('img2');
-                if (img2) img2.style.marginBottom = `-${gap}px`;
-                img4.style.marginBottom = `-${gap}px`;
-            }
-        }
+        if (img2) img2.style.marginBottom = '-15px';
+        if (img4) img4.style.marginBottom = '-20px';
     }
 });
+
