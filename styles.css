@@ -1218,27 +1218,6 @@ position: absolute;
 }   
 
 
-/* adding media query for large monitors*/
-@media (max-height: 920px) {
-    .scene {
-        overflow: visible;
-    }
 
-    #sidebar {
-        overflow: visible;
-    }
-
-    #img2 {
-        position: absolute;
-        bottom: -18px;
-        height: 25%;
-    }
-
-    #img4 {
-        position: absolute;
-        bottom: -20px;
-        height: 25vh;
-    }
-}
 
 

@@ -424,3 +424,11 @@ function animateFlipbook() {
 
 
 
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.devicePixelRatio === 1) {
+        const img2 = document.getElementById('img2');
+        const img4 = document.getElementById('img4');
+        if (img2) img2.style.marginBottom = '-3px';
+        if (img4) img4.style.marginBottom = '-3px';
+    }
+});
