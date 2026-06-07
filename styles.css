@@ -1220,16 +1220,17 @@ position: absolute;
 
 /* adding media query for large monitors*/
 @media (min-height: 1000px) {
-
     .scene {
         overflow: visible;
     }
 
+    #sidebar {
+        overflow: visible;
+    }
 
     #img2 {
-        position: relative;
-        left: -20px;
-        bottom: 50px;
+        position: absolute;
+        bottom: -3px;
         height: 25%;
     }
 
