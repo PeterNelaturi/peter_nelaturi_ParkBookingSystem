@@ -604,13 +604,18 @@ body {
 
 #img1 {
 
-    width: 100%;
-    height: 120%;
-    object-fit: fill;  
-    position: absolute;
-     top: -10%;
-    left: 0;
+   
   
+    width: 380px;    
+    max-width: 400px;       
+    height: 100vh;           
+    position: relative;         
+    top: 0;
+    right: 0;
+
+
+
+
 } 
 
 
@@ -630,8 +635,8 @@ body {
     width: 25%;           
     height: 20%;         
     object-fit: contain;     
-    bottom: 0;
-    left: 0;
+    bottom: -10px;
+    left: -6px;
     z-index: 10;           
     
 }
@@ -650,12 +655,14 @@ body {
 
 
 #img3 {
-    width: 100%;
-    height: 120%;
-    object-fit: fill;  
-    position: absolute;
-     top: -10%;
-    left: 0;
+ 
+
+    width: 380px;    
+    max-width: 400px;       
+    height: 100vh;           
+    position: relative;         
+    top: 0;
+    right: 0;
    
 }
 
@@ -675,11 +682,13 @@ body {
     position: absolute;
     width: 110px;
     height: 20vh;
-    bottom: 0;        /* anchor to bottom */
+    bottom: 0;        
     top: auto;        
-    left: 0px;
+    left: -12px;
     z-index: 10;
     object-fit: contain; 
+
+   
 }
         
 
